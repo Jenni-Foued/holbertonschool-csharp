@@ -7,7 +7,7 @@ namespace _5_print_float
         static void Main(string[] args)
         {
             float number = 3.14159f;
-            Console.WriteLine($"Float: {number.ToString("0.00")}");
+            Console.WriteLine("Float: {0:f2}", number);
         }
     }
 }
