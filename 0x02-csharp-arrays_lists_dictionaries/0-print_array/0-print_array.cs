@@ -20,6 +20,8 @@ class Array
                 array[i] = i;
                 Console.Write($"{i} ");
             }
+            array[i] = i;
+            Console.WriteLine($"{i}");
         }
         return array;
     }
