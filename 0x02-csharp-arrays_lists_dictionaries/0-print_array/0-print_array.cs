@@ -10,19 +10,19 @@ class Array
             Console.Write("Size cannot be negative");
             return null;
         }
-        int[] array = new int[size];
+        int[] newArray = new int[size];
         if (size == 0)
             Console.WriteLine();
         else
         {
             for (; i < size; i++)
             {
-                array[i] = i;
+                newArray[i] = i;
                 Console.Write($"{i} ");
             }
-            array[i] = i;
+            newArray[i] = i;
             Console.WriteLine($"{i}");
         }
-        return array;
+        return newArray;
     }
 }
