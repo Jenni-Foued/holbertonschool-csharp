@@ -24,6 +24,8 @@ class List
             numbers.Add(i);
             System.Console.WriteLine(i);
         }
+        else
+            System.Console.WriteLine();
         return numbers;
     }
 }
