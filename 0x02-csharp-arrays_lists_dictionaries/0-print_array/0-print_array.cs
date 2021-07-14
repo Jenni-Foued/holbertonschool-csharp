@@ -15,13 +15,11 @@ class Array
             Console.WriteLine();
         else
         {
-            for (; i < size - 1; i++)
+            for (; i < size; i++)
             {
                 array[i] = i;
                 Console.Write($"{i} ");
             }
-            array[i] = i;
-            Console.WriteLine($"{i}");
         }
         return array;
     }
