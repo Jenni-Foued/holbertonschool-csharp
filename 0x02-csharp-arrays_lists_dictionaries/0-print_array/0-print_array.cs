@@ -15,7 +15,7 @@ class Array
             Console.WriteLine();
         else
         {
-            for (; i < size; i++)
+            for (; i < size - 1; i++)
             {
                 newArray[i] = i;
                 Console.Write($"{i} ");
