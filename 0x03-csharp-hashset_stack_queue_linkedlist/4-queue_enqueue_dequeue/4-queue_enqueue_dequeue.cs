@@ -9,7 +9,7 @@ class MyQueue
         System.Console.WriteLine("Number of items: {0}", itemsCount);
 
         if (itemsCount > 0)
-            System.Console.WriteLine("Top item: {0}", aQueue.Peek());
+            System.Console.WriteLine("First item: {0}", aQueue.Peek());
         else
             System.Console.WriteLine("Queue is empty");
 
