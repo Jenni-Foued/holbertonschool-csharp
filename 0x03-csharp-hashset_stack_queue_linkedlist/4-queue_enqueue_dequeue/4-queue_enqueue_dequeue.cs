@@ -12,9 +12,9 @@ class MyQueue
             System.Console.WriteLine("Top item: {0}", aQueue.Peek());
         else
             System.Console.WriteLine("Queue is empty");
-        
+
         System.Console.WriteLine("Queue contains \"{1}\": {0}", aQueue.Contains(search), search);
-        
+
         while (aQueue.Contains(search))
         {
             aQueue.Dequeue();
