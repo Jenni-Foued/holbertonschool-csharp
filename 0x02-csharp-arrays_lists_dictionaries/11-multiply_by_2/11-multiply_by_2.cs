@@ -9,6 +9,6 @@ class Dictionary
         foreach (KeyValuePair<string, int> tuple in myDict)
             myDictionary[tuple.Key] = tuple.Value * 2;
 
-        return myDict;
+        return myDictionary;
     }
 }
