@@ -1,10 +1,14 @@
 using System;
+using System.Collections.Generic;
 
 class List
 {
-    public static System.Collections.Generic.List<int> DeleteAt(System.Collections.Generic.List<int> myList, int index)
+    public static List<int> DeleteAt(List<int> myList, int index)
     {
-        myList.Remove(myList[index]);
+        if (index < 0 || index >= myList.Count)
+            System.Console.WriteLine("Index is out of range");
+        else
+            myList.Remove(myList[index]);
         return myList;
     }
 }
