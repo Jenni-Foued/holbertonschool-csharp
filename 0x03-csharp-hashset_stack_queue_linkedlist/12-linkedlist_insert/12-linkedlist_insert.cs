@@ -10,17 +10,20 @@ class LList
             return myLList.First;
         }
         LinkedListNode<int> node = myLList.First;
-        while (node.Next != null)
+        while (node != null)
         {
             if (n <= node.Value)
             {
                 myLList.AddBefore(node, n);
-                break;
+                return node.Previous;
             }
-            else
+            if (node.Next != null)
                 node = node.Next;
+            else
+                break;
         }
 
-        return node.Previous;
+        myLList.AddAfter(node, n);
+        return node.Next;
     }
 }
