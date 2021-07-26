@@ -20,6 +20,6 @@ public Dog(string n, float a, string o, Rating r){
 public override string ToString()
 {
     return 
-    $"{base.ToString()} name: {this.name.ToString()}\nAge: {this.age.ToString()}\nOwner: {this.owner}\nRating: {this.rating.ToString()}";
+    $"{base.ToString()} Name: {this.name.ToString()}\nAge: {this.age.ToString()}\nOwner: {this.owner}\nRating: {this.rating.ToString()}";
 }
 }
