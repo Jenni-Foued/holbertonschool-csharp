@@ -9,9 +9,9 @@ namespace Enemies
         /// <summary> Represents the health of a Zombie.</summary>
         public int health;
         /// <summary>Initializes a new instance of the <see cref="Zombie"/> class.</summary>
-        public Zombie(int h = 0)
+        public Zombie()
         {
-            this.health = h;
+            this.health = 0;
         }
     }
 }
