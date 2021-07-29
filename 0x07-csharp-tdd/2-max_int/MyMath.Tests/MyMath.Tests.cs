@@ -6,7 +6,7 @@ namespace MyMath.Tests
     public class Tests
     {
         [Test]
-        public void Max_ListOfIntegers_ReturnsMaximumNumber()
+        public void Max_ListOfMixedIntegers_ReturnsMaximumNumber()
         {
             List<int> l = new List<int>();
             l.Add(-22);
@@ -19,6 +19,27 @@ namespace MyMath.Tests
             l.Add(-1);
             Assert.AreEqual(MyMath.Operations.Max(l),99);
         }
+
+        [Test]
+        public void Max_ListOfPositiveIntegers_ReturnsMaximumNumber()
+        {
+            List<int> l = new List<int>();
+            l.Add(0);
+            l.Add(10);
+            l.Add(99);
+            Assert.AreEqual(MyMath.Operations.Max(l),99);
+        }
+
+        [Test]
+        public void Max_ListOfNegativeIntegers_ReturnsMaximumNumber()
+        {
+            List<int> l = new List<int>();
+            l.Add(-1);
+            l.Add(-10);
+            l.Add(-99);
+            Assert.AreEqual(MyMath.Operations.Max(l),-1);
+        }
+
 
         [Test]
         public void Max_EmptyList_ReturnsZero()
