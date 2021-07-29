@@ -11,17 +11,20 @@ namespace Text
         public static int UniqueChar(string s)
         {
             int occurence = 0;
-            if (s != null && s.Length != 0)
+            if (s != null)
             {
-                for (int i = 0; i< s.Length;i++)
+                if (s.Length != 0)
                 {
-                    for (int j =0; j< s.Length;j++)
+                    for (int i = 0; i< s.Length;i++)
                     {
-                        if (s[i] == s[j])
-                            occurence += 1;
+                        for (int j =0; j< s.Length;j++)
+                        {
+                            if (s[i] == s[j])
+                                occurence += 1;
+                        }
+                        if (occurence == 1)
+                            return i; 
                     }
-                    if (occurence == 1)
-                        return i; 
                 }
             }
             return -1;
