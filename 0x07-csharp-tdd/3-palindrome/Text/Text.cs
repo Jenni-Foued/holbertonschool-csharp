@@ -17,8 +17,8 @@ namespace Text
             int i = 0;
             while (i < j)
             {
-                var matchj = s[j].ToString().IndexOfAny(" !?.:;,".ToCharArray()) != -1;
-                var matchi = s[i].ToString().IndexOfAny(" !?.:;,".ToCharArray()) != -1;
+                var matchj = s[j].ToString().IndexOfAny("ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray()) == -1;
+                var matchi = s[i].ToString().IndexOfAny("ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray()) == -1;
                 if(matchj)
                     j--;
                 else if (matchi)
