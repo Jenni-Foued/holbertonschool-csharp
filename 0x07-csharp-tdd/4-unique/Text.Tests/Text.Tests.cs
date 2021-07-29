@@ -21,5 +21,22 @@ namespace Text.Tests
         {
             Assert.AreEqual(Text.Str.UniqueChar("aabbccdd"), -1);
         }
+
+        [Test]
+        public void UniqueChar_Null_ReturnsNegativeOne()
+        {
+            Assert.AreEqual(Text.Str.UniqueChar(null), -1);
+        }
+        [Test]
+        public void UniqueChar_InTheEnd()
+        {
+            Assert.AreEqual(Text.Str.UniqueChar("aabbccd"), 6);
+        }
+
+        [Test]
+        public void UniqueChar_InTheMiddle()
+        {
+            Assert.AreEqual(Text.Str.UniqueChar("aabbcddee"), 4);
+        }
     }
 }
