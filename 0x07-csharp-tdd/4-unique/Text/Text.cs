@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Linq;
 namespace Text
 {
     /// <summary>Str class contains one methode UniqueChar().</summary>
@@ -10,22 +10,13 @@ namespace Text
         /// <return>Index of first non-repeating character or -1 if there is no non-repeating character.</return>
         public static int UniqueChar(string s)
         {
-            int occurence = 0;
-            if (s != null)
+            int freq;
+            int i = 0;
+            for (; i < s.Length;i++)
             {
-                if (s.Length != 0)
-                {
-                    for (int i = 0; i< s.Length;i++)
-                    {
-                        for (int j =0; j< s.Length;j++)
-                        {
-                            if (s[i] == s[j])
-                                occurence += 1;
-                        }
-                        if (occurence == 1)
-                            return i; 
-                    }
-                }
+                freq = s.Count(f => (f == s[i]));
+                if (freq == 1)
+                    return i;
             }
             return -1;
         }

@@ -11,7 +11,7 @@ namespace Text.Tests
         }
 
         [Test]
-        public void UniqueChar_String_ReturnsIndex()
+        public void UniqueChar_FirstChar()
         {
             Assert.AreEqual(Text.Str.UniqueChar("abcd"), 0);
         }
@@ -23,20 +23,15 @@ namespace Text.Tests
         }
 
         [Test]
-        public void UniqueChar_Null_ReturnsNegativeOne()
+        public void UniqueChar_InThemiddle()
         {
-            Assert.AreEqual(Text.Str.UniqueChar(null), -1);
-        }
-        [Test]
-        public void UniqueChar_InTheEnd()
-        {
-            Assert.AreEqual(Text.Str.UniqueChar("aabbccd"), 6);
+            Assert.AreEqual(4, Text.Str.UniqueChar("aabbeccdd"));
         }
 
         [Test]
-        public void UniqueChar_InTheMiddle()
+        public void UniqueChar_LastChar()
         {
-            Assert.AreEqual(Text.Str.UniqueChar("aabbcddee"), 4);
-        }
+            Assert.AreEqual(7, Text.Str.UniqueChar("aabbcccd"));
+        }        
     }
 }
