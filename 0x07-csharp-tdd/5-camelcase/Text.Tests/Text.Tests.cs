@@ -21,5 +21,11 @@ namespace Text.Tests
         {
             Assert.AreEqual(Text.Str.CamelCase("lorem Ipsum Dolor Sit Amet"), 5);
         }
+
+        [Test]
+        public void Camelcase_TwoWordString_ReturnsOne()
+        {
+            Assert.AreEqual(Text.Str.CamelCase("one Two"), 2);
+        }
     }
 }
