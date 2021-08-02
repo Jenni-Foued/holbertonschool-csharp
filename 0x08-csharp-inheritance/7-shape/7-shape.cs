@@ -56,7 +56,7 @@ class Rectangle : Shape
     }
 
     /// <summary>
-    /// 
+    /// returns the area of the rectangle
     /// </summary>
     /// <returns></returns>
     public new int Area()
@@ -65,7 +65,7 @@ class Rectangle : Shape
     }
 
     /// <summary>
-    /// 
+    /// returns the area of the rectangle
     /// </summary>
     /// <returns></returns>
     public override string ToString()
