@@ -10,7 +10,7 @@ class VectorMath
     {
         double magnitude = 0;
         if (vector.Length > 3 || vector.Length < 2)
-            return (-1);
+            return -1;
         foreach (var coord in vector)
         {
             magnitude += (coord * coord);
