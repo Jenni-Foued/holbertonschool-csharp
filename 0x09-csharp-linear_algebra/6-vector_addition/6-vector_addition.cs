@@ -9,15 +9,14 @@ class VectorMath
     ///<return> The vectors' addition.</return>
     public static double[] Add(double[] vector1, double[] vector2)
     {
-        float l1, l2;
-        double[] resultingVector;
+        int l1, l2;
         
         l1 = vector1.Length;
         l2 = vector2.Length;
 
         if(l1 < 2 || l2 < 2 || l1 > 3 || l2 > 3 || l1 != l2)
             return -1;
-        
+        double[l1] resultingVector;
         for (int i = 0; i < l1; i++)
             resultingVector[i] = vector1[i] + vector2[i];
         
