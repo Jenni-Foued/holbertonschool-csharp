@@ -10,7 +10,7 @@ class VectorMath
     public static double[] Add(double[] vector1, double[] vector2)
     {
         float l1, l2;
-        double resultingVector;
+        double[] resultingVector;
         
         l1 = vector1.Length;
         l2 = vector2.Length;
