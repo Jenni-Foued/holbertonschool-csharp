@@ -16,7 +16,7 @@ class VectorMath
 
         if(l1 < 2 || l2 < 2 || l1 > 3 || l2 > 3 || l1 != l2)
             return -1;
-        double[l1] resultingVector;
+        double[] resultingVector = new double[l1];
         for (int i = 0; i < l1; i++)
             resultingVector[i] = vector1[i] + vector2[i];
         
