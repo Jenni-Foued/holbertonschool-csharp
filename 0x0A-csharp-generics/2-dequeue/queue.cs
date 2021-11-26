@@ -19,13 +19,13 @@ class Queue<T>
         if (head == null)
         {
             Console.WriteLine("Queue is empty");
-            return default(T);
+            return default;
         }
 
         T currentHead = head.value;
         head = head.next;
-        count--;
-        return currentHead;
+        count -= 1;
+        return (currentHead);
     }
 
     /// <summary>
@@ -43,6 +43,7 @@ class Queue<T>
         else
         {
             tail.next = n;
+            tail = n;
         }
         count++;
     }
