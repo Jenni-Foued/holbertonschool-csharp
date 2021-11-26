@@ -19,7 +19,7 @@ class Queue<T>
         if (head == null)
         {
             Console.WriteLine("Queue is empty");
-            return default;
+            return default(T);
         }
 
         T currentHead = head.value;
