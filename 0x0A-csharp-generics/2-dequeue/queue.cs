@@ -11,7 +11,8 @@ class Queue<T>
     public int count;
 
     /// <summary>
-    /// Removes the first node in the queue and returns its value
+    /// Removes the first node in the queue and returns its value.
+    ///<returns>Returns the value of the removed node.</returns>
     /// </summary>
     public T Dequeue()
     {
