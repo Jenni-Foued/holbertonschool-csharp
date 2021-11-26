@@ -1,18 +1,15 @@
 ﻿using System;
 
-namespace _0_queue
+/// <summary>
+/// Declare the generic class
+/// </summary>
+class Queue<T>
 {
     /// <summary>
-    /// Declare the generic class
+    /// Returns the Queue’s type
     /// </summary>
-    class Queue<T>
+    public Type CheckType()
     {
-        /// <summary>
-        /// Returns the Queue’s type
-        /// </summary>
-        public Type CheckType()
-        {
-            return typeof(T);
-        }
+        return typeof(T);
     }
 }
