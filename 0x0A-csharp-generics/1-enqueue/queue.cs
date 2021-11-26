@@ -25,6 +25,7 @@ class Queue<T>
         else
         {
             tail.next = n;
+            tail = n;
         }
         count++;
     }
