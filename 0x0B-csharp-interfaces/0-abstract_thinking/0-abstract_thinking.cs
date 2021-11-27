@@ -15,6 +15,6 @@ abstract class Base
     /// </summary>
     public override string ToString()
     {
-        return name + " is a " + base.ToString();
+        return name + " is a " + this.GetType();
     }
 }
