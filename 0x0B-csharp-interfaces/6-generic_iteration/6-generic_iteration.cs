@@ -199,14 +199,14 @@ public class RoomObjects
 }
 
 ///<summary>
-///Generic class Objs
+///Generic class Objs.
 ///</summary>
 public class Objs<T> : IEnumerable<T>
 {
     List<T> l = new List<T>();
 
     ///<summary>
-    ///Add method
+    ///Add method.
     ///</summary>
     public void Add(T obj)
     {
