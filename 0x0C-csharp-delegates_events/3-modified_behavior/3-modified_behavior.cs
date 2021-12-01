@@ -1,34 +1,6 @@
 ﻿using System;
 
 /// <summary>
-/// Heal or damage modifier.
-/// </summary>
-
-public enum Modifier
-{
-    /// <summary>
-    /// Weak modifier (0.5).
-    /// </summary>
-    Weak,
-    /// <summary>
-    /// Base modifier (1).
-    /// </summary>
-    Base,
-    /// <summary>
-    /// Strong modifier (1.5).
-    /// </summary>
-    Strong
-}
-
-/// <summary>
-/// CalculateModifier delegate.
-/// </summary>
-/// <param name="baseValue">Amount of damage or heal.</param>
-/// <param name="modifier">Damage or heal modifier.</param>
-/// <returns>Value after being multiplied by the modifier.</returns>
-public delegate float CalculateModifier(float baseValue, Modifier modifier);
-
-/// <summary>
 /// Player class contains player's informations.
 /// </summary>
 public class Player
@@ -148,3 +120,30 @@ public class Player
         }
     }
 }
+
+/// <summary>
+/// Heal or damage modifier.
+/// </summary>
+public enum Modifier
+{
+    /// <summary>
+    /// Weak modifier (0.5).
+    /// </summary>
+    Weak,
+    /// <summary>
+    /// Base modifier (1).
+    /// </summary>
+    Base,
+    /// <summary>
+    /// Strong modifier (1.5).
+    /// </summary>
+    Strong
+}
+
+/// <summary>
+/// CalculateModifier delegate.
+/// </summary>
+/// <param name="baseValue">Amount of damage or heal.</param>
+/// <param name="modifier">Damage or heal modifier.</param>
+/// <returns>Value after being multiplied by the modifier.</returns>
+public delegate float CalculateModifier(float baseValue, Modifier modifier);
