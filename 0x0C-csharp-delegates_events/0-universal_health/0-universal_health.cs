@@ -4,12 +4,12 @@ using System.Text;
 
 /// <summary>
 /// Player class contains player's informations.
-/// <param name="name">Player's name.</param>
-/// <param name="maxHp">Player's maximum health points.</param>
-/// <param name="hp">Player's current health points.</param>
 /// </summary>
 public class Player
 {
+    /// Player's name.
+    /// Player's maximum health points.
+    /// Player's current health points.
     private string name;
     private float maxHp;
     private float hp;
