@@ -116,7 +116,7 @@ public class Player
             case Modifier.Strong:
                 return baseValue * 1.5f;
             default:
-                return default;
+                return default(float);
         }
     }
 }
