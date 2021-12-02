@@ -8,10 +8,10 @@ using System.Text;
 public class Player
 {
     /// Player's name.
-    /// Player's maximum health points.
-    /// Player's current health points.
     private string name;
+    /// Player's maximum health points.
     private float maxHp;
+    /// Player's current health points.
     private float hp;
 
     /// <summary>
