@@ -7,10 +7,19 @@ namespace InventoryLibrary
     /// </summary>
     public class BaseClass
     {
-        string id { get; set; }
+        /// <summary>
+        /// Data's id.
+        /// </summary>
+        public string id { get; set; }
 
-        DateTime date_created { get; set; }
+        /// <summary>
+        /// Data creation date.
+        /// </summary>
+        public DateTime date_created { get; set; }
 
-        DateTime date_updated { get; set; }
+        /// <summary>
+        /// Data update date.
+        /// </summary>
+        public DateTime date_updated { get; set; }
     }
 }
