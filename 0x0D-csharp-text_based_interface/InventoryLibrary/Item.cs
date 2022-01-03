@@ -8,37 +8,63 @@ namespace InventoryLibrary
     /// </summary>
     public class Item : BaseClass
     {
+        private string _name;
         /// <summary>
         /// Item's name.
         /// </summary>
-        public string name { get; set; }
+        public string name { 
+            get { return _name; }
+            set {
+                updatetime();
+                _name = value; 
+            } 
+        }
 
+        private string _description;
         /// <summary>
         /// Item's description.
         /// </summary>
-        public string description { get; set; }
+        public string description {
+            get { return _description; }
+            set {
+                updatetime();
+                _description = value;
+            } 
+        }
 
+        private float _price;
         /// <summary>
         /// Item's price.
         /// </summary>
-        public float price { get; set; }
+        public float price {
+            get { return _price; }
+            set {
+                updatetime();
+                _price = value;
+            } 
+        }
 
+        private List<string> _tags;
         /// <summary>
         /// A list of tags.
         /// </summary>
-        public List<string> tags = new List<string>();
+        public List<string> tags
+        {
+            get { return _tags; }
+            set{
+                updatetime();
+                _tags = value;
+            }
+        }
 
         /// <summary>
-        /// Item class constructor.
+        /// Constructor
         /// </summary>
-        /// <param name="name">Item's name</param>
-        /// <param name="description">Item's description</param>
-        /// <param name="price">Item's price</param>
-        public Item (string name, string description, float price)
+        /// <param name="name"></param>
+        public Item(string name)
         {
             this.name = name;
-            this.description = description;
-            this.price = (float)Math.Round(price, 2);
+            tags = new List<string>();
         }
     }
 }

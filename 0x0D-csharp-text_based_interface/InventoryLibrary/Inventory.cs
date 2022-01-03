@@ -5,31 +5,63 @@
     /// </summary>
     public class Inventory : BaseClass
     {
+        private string _user_id;
+
         /// <summary>
         /// User's id.
         /// </summary>
-        public string user_id { get; set; }
+        public string user_id
+        {
+            get { return _user_id; }
+            set
+            {
+                updatetime();
+                _user_id = value;
+            }
+        }
+
+        private string _item_id;
 
         /// <summary>
         /// Item's id.
         /// </summary>
-        public string item_id { get; set; }
+        public string item_id
+        {
+            get { return _item_id; }
+            set
+            {
+                updatetime();
+                _item_id = value;
+            }
+        }
+
+        private int _quantity;
 
         /// <summary>
         /// Quantity of items in the inventory.
         /// </summary>
-        public int quantity { get; set; }
+        public int quantity
+        {
+            get { return _quantity; }
+            set
+            {
+                updatetime();
+                if (value < 0)
+                    value = 0;
+                _quantity = value;
+            }
+        }
 
         /// <summary>
         /// Inventory class constructor.
         /// </summary>
-        /// <param name="user_id">User's id</param>
-        /// <param name="item_id">Item's id</param>
+        /// <param name="user">User</param>
+        /// <param name="item">Item</param>
         /// <param name="quantity">Item's quantity</param>
-        public Inventory(string user_id, string item_id, int quantity = 1)
+        public Inventory(User user, Item item, int quantity = 1)
         {
-            this.user_id = user_id;
-            this.item_id = item_id;
+            this.user_id = user.id;
+            this.item_id = item.id;
             this.quantity = quantity;
         }
     }
