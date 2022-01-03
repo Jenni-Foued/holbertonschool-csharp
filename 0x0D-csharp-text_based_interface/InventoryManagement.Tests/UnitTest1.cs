@@ -8,8 +8,8 @@ namespace Tests
 	public class Tests
 	{
 		public static int id;
-		public List<string> ListUsers = new List<string>() { "salah", "wael", "ahmed", "Amine", "salah", "mostafa", "kamel" };
-		public List<string> ListItems = new List<string>() { "shoes", "boat", "pool", "table", "chair", "sofa", "spoon" };
+		public List<string> ListUsers = new List<string>() { "salah", "wael", "ahmed", "Amine", "salah", "mostafa", "kamel", "Foued" };
+		public List<string> ListItems = new List<string>() { "shoes", "boat", "pool", "table", "chair", "sofa", "spoon", "House" };
 		public string randomName { get { return getRandomName(); } set { } }
 		public string randomItem { get { return getRandomItem(); } set { } }
 
@@ -67,7 +67,7 @@ namespace Tests
 			Inventory inv1 = new Inventory(user, item);
 			Assert.AreEqual(1, inv1.quantity);
 
-			Inventory inv2 = new Inventory(user, item, -6);
+			Inventory inv2 = new Inventory(user, item, -1);
 			Assert.AreEqual(0, inv2.quantity);
 		}
 
@@ -75,14 +75,17 @@ namespace Tests
 		public void test_price()
 		{
 			Item item = new Item(randomItem);
-			item.price = 5.15424f;
-			Assert.AreEqual(5.15f, item.price);
+			item.price = 5.159f;
+			Assert.AreEqual(5.16f, item.price);
 			Item item1 = new Item(randomItem);
 			item1.price = 0;
 			Assert.AreEqual(0.00, item1.price);
 			Item item2 = new Item(randomItem);
 			item2.price = 5.1f;
 			Assert.AreEqual(5.10f, item2.price);
+			Item item3 = new Item(randomItem);
+			item3.price = 3.14159265359f;
+			Assert.AreEqual(3.14f, item2.price);
 		}
 	}
 }
